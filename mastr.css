@@ -529,7 +529,7 @@ section {
     main {
         padding: 100px 200px;
         width: 100%;
-        min-height: 60vh;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         background-color: #1a2e1a;
