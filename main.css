@@ -137,6 +137,9 @@ body {
   a.logo-me {
     font-size: 50px;
   }
+  a.linkedin {
+    font-size: 40px;
+  }
 }
 /* Medium */
 @media (min-width: 992px) {
