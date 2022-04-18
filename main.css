@@ -96,12 +96,6 @@ body {
     font-size: 100px;
     line-height: 180px;
   }
-  .fa-brands,
-  .fab {
-    font-size: 130px;
-    left: calc((95% - 52px) / 2);
-    top: calc((77% - 60px) / 1);
-  }
   h1 {
     font-size: 80px;
   }
@@ -135,14 +129,11 @@ body {
     font-size: 35px;
     height: 75px;
   }
-  span.linkedin {
-    left: 425.156px;
-    font-size: 15px;
-    top: 80%;
-    font-size: 40px;
-  }
   footer {
     height: 4vh;
+  }
+  a.logo-me {
+    font-size: 50px;
   }
 }
 /* Medium */
@@ -153,10 +144,6 @@ body {
   footer {
     height: 5vh;
   }
-  span.linkedin {
-    left: calc((100% - 55.75px) / 2);
-    top: 80%;
-  }
   header {
     height: 100%;
   }
@@ -199,21 +186,11 @@ body {
     height: 280px;
   }
 
-  .fa-brands,
-  .fab {
-    font-size: 60px;
-  }
   .fa-address-card:before,
   .fa-contact-card:before,
   .fa-vcard:before {
     font-size: 55px;
     line-height: 30px;
-  }
-  .fa-brands,
-  .fab {
-    font-size: 50px;
-    left: calc((100% - 52px) / 2);
-    top: calc((80% - 60px) / 1);
   }
   p.landing {
     font-size: 18px;
@@ -253,6 +230,9 @@ body {
   p.one {
     font-size: 16px;
     line-height: 30px;
+  }
+  a.logo-me {
+    font-size: 30px;
   }
 }
 /* Large */
@@ -263,11 +243,6 @@ body {
   footer {
     height: 5vh;
   }
-  span.linkedin {
-    left: calc((100% - 55.75px) / 2);
-    top: 75%;
-    font-size: 16px;
-  }
   header {
     height: 100%;
   }
@@ -309,22 +284,11 @@ body {
     width: 300px;
     height: 280px;
   }
-
-  .fa-brands,
-  .fab {
-    font-size: 60px;
-  }
   .fa-address-card:before,
   .fa-contact-card:before,
   .fa-vcard:before {
     font-size: 55px;
     line-height: 30px;
-  }
-  .fa-brands,
-  .fab {
-    font-size: 50px;
-    left: calc((100% - 52px) / 2);
-    top: calc((80% - 60px) / 1);
   }
   p.landing {
     font-size: 18px;
@@ -364,6 +328,9 @@ body {
   p.one {
     font-size: 16px;
     line-height: 30px;
+  }
+  a.logo-me {
+    font-size: 30px;
   }
 }
 /* header */
@@ -398,9 +365,9 @@ a.links-nav:hover {
   border-bottom: 2px solid #fff;
 }
 a.logo-me {
+  font-family: "Lobster", cursive;
   text-decoration: none;
-  color: black;
-  font-size: 20px;
+  color: var(--first-color);
   font-weight: 600;
   padding: 10px;
 }
@@ -429,23 +396,6 @@ h2 {
   content: "\f2bb";
 
   color: #f96d00;
-}
-.fa-brands,
-.fab {
-  font-family: "Font Awesome 6 Brands";
-  font-weight: 400;
-  color: white;
-  position: absolute;
-
-  transition-duration: 0.3s;
-}
-.fa-brands:hover {
-  color: var(--third-color);
-}
-span.linkedin {
-  position: absolute;
-  font-weight: 500;
-  color: white;
 }
 /* End Landing */
 /* Start main */
@@ -674,4 +624,26 @@ p.Name:hover {
   animation-name: Colors;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+.container.ew {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+a.linkedin {
+  color: white;
+  font-size: 20px;
+  transition-duration: 0.2s;
+}
+a.linkedin:hover {
+  color: #0a66c2;
+}
+a.t-me {
+  text-decoration: none;
+  color: white;
+  transition-duration: 0.2s;
+}
+a.t-me:hover {
+  text-decoration: underline var(--third-color);
 }
