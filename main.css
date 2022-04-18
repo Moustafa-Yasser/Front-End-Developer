@@ -29,11 +29,23 @@ body {
   .container {
     width: 750px;
   }
+  .up {
+    background-color: var(--third-color);
+  }
+  a.t-me {
+    margin-right: 30px;
+
+    margin-top: 30px;
+  }
   header {
     height: 75px;
   }
   a.links-nav {
     font-size: 35px;
+  }
+  ul.links li:hover {
+    background-color: #fff;
+    color: var(--third-color);
   }
   p.landing {
     font-size: 45px;
@@ -41,7 +53,7 @@ body {
   }
   .personal-blogs {
     grid-template-columns: repeat(1, auto);
-    margin-top: 30px;
+    margin-top: 70px;
     row-gap: 80px;
   }
   .box-one {
@@ -49,9 +61,11 @@ body {
     display: grid;
     align-items: center;
   }
-  span {
+  span.under {
     font-size: 25px;
     margin: 40px 0px;
+    margin-top: 60px;
+    line-height: 50px;
   }
   p.one {
     font-size: 30px;
@@ -70,14 +84,12 @@ body {
     width: 720px;
     height: 400px;
   }
-  span {
-    margin-top: 25px;
-  }
   div.Services {
     height: fit-content;
   }
   .box-three {
-    height: 200px;
+    height: 230px;
+    width: 90%;
   }
   span.hiddn.cen {
     width: 53%;
@@ -124,7 +136,7 @@ body {
     padding: 10px;
   }
   div.Contact {
-    height: 550px;
+    height: 630px;
     margin-top: 160px;
   }
   p.Name {
@@ -138,13 +150,115 @@ body {
     font-size: 50px;
   }
   a.linkedin {
-    font-size: 40px;
+    font-size: 60px;
+  }
+  ul.links {
+    grid-template-columns: repeat(1, auto);
+    row-gap: 10px;
+    position: absolute;
+    top: 90px;
+    right: 115px;
+    background-color: var(--third-color);
+  }
+  header nav.none {
+    display: none;
+  }
+  header:hover nav.none {
+    display: block;
+  }
+  ul.links::before {
+    content: "";
+    border-style: solid;
+    border-width: 30px;
+    border-color: transparent var(--third-color) transparent transparent;
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    display: block;
+  }
+  ul.links li {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #ddd;
+    padding: 25px;
+  }
+  div.icon-menu {
+    background-color: transparent;
+    position: absolute;
+    right: 115px;
+    display: block;
+  }
+  span.menu {
+    width: 50px;
+    height: 5px;
+    background-color: #393e46;
+    margin: 0px;
+    margin-top: 7px;
+    display: block;
   }
 }
 /* Medium */
 @media (min-width: 992px) {
   .container {
     width: 1000px;
+  }
+  span.under {
+    font-size: 16px;
+    margin: 0px 0px;
+    margin-top: 0px;
+    line-height: 50px;
+  }
+  ul.links li:hover {
+    background-color: transparent;
+  }
+  .up {
+    background-color: var(--third-color);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  ul.links::before {
+    content: "";
+    border-style: solid;
+    border-width: 30px;
+    border-color: transparent var(--third-color) transparent transparent;
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    display: none;
+  }
+  header nav.none {
+    display: block;
+  }
+  div.icon-menu {
+    display: none;
+  }
+  ul.links {
+    display: grid;
+    row-gap: 0px;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 10px;
+    top: 0px;
+    background-color: transparent;
+  }
+  ul.links li {
+    border-bottom-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #ddd;
+    padding: 10px;
+  }
+
+  span.icon-menu {
+    visibility: hidden;
+  }
+  nav {
+    visibility: visible;
+  }
+  a.linkedin {
+    font-size: 30px;
   }
   footer {
     height: 5vh;
@@ -160,7 +274,7 @@ body {
     line-height: 30px;
   }
   p.Name {
-    font-size: 18px;
+    font-size: 20px;
     height: 100%;
   }
   div.Contact {
@@ -224,7 +338,8 @@ body {
     height: 75vh;
   }
   .box-three {
-    height: 170px;
+    height: 200px;
+    width: 80%;
   }
   span.hiddn.cen {
     width: 35%;
@@ -245,6 +360,43 @@ body {
   .container {
     width: 1170px;
   }
+  .up {
+    background-color: var(--third-color);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  ul.links::before {
+    content: "";
+    border-style: solid;
+    border-width: 30px;
+    border-color: transparent var(--third-color) transparent transparent;
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    display: none;
+  }
+  header nav.none {
+    display: block;
+  }
+  div.icon-menu {
+    display: none;
+  }
+  ul.links {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 10px;
+    top: -10px;
+  }
+  span.icon-menu {
+    visibility: hidden;
+  }
+  nav {
+    visibility: visible;
+  }
+  a.linkedin {
+    font-size: 30px;
+  }
   footer {
     height: 5vh;
   }
@@ -259,7 +411,7 @@ body {
     line-height: 30px;
   }
   p.Name {
-    font-size: 18px;
+    font-size: 20px;
     height: 100%;
   }
   div.Contact {
@@ -322,7 +474,8 @@ body {
     height: 75vh;
   }
   .box-three {
-    height: 170px;
+    height: 200px;
+    width: 80%;
   }
   span.hiddn.cen {
     width: 35%;
@@ -339,21 +492,11 @@ body {
   }
 }
 /* header */
-.up {
-  background-color: var(--third-color);
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-ul.links {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  column-gap: 10px;
 }
 ul.links li {
   list-style: none;
@@ -361,13 +504,12 @@ ul.links li {
 a.links-nav {
   text-decoration: none;
   font-weight: 600;
-  padding: 10px;
   color: white;
   transition-duration: 0.2s;
 }
 a.links-nav:hover {
-  background-color: var(--second-color);
-  border-bottom: 2px solid #fff;
+  background-color: #fff;
+  color: var(--third-color);
 }
 a.logo-me {
   font-family: "Lobster", cursive;
@@ -425,7 +567,7 @@ div#Services {
   text-align: center;
   padding: 10px;
   background-color: var(--second-color);
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 20px 0 #f96d001f;
   transition-duration: 1s;
 }
@@ -455,7 +597,7 @@ h1 {
   font-weight: 900;
   text-shadow: 3px 6px 15px black;
 }
-span {
+span.under {
   text-align: center;
   font-weight: 200;
 }
@@ -514,7 +656,6 @@ h1.Contacts {
   margin-top: 40px;
 }
 .box-three {
-  width: 80%;
   margin: auto;
   display: grid;
   justify-content: center;
@@ -525,6 +666,7 @@ h1.Contacts {
   font-size: 25px;
   position: relative;
   box-shadow: 0 0 10px 0 black;
+  padding: 20px;
 }
 div#Contact {
   width: 10px;
@@ -627,7 +769,7 @@ p.Name {
 }
 p.Name:hover {
   animation-name: Colors;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 .container.ew {
@@ -638,7 +780,6 @@ p.Name:hover {
 }
 a.linkedin {
   color: white;
-  font-size: 20px;
   transition-duration: 0.2s;
 }
 a.linkedin:hover {
