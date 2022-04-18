@@ -41,8 +41,8 @@ body {
   }
   .personal-blogs {
     grid-template-columns: repeat(1, auto);
-    row-gap: 30px;
     margin-top: 30px;
+    row-gap: 80px;
   }
   .box-one {
     height: 550px;
@@ -63,6 +63,8 @@ body {
   }
   div.Projects {
     grid-template-columns: auto;
+    row-gap: 70px;
+    margin-top: 60px;
   }
   img.pro {
     width: 720px;
