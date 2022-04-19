@@ -98,10 +98,10 @@ body {
     width: 53%;
   }
   div#Projects {
-    top: 252vh;
+    top: 180vh;
   }
   div#Contact {
-    top: 500vh;
+    top: 445%;
   }
   h2 {
     font-size: 55px;
@@ -582,6 +582,10 @@ a.logo-me {
   justify-content: center;
   height: 100vh;
   align-items: center;
+  background-image: url(images/my-logo6.png);
+  background-repeat: no-repeat;
+  background-position: center 150px;
+  background-size: 150px;
 }
 p.landing {
   height: 100%;
