@@ -586,6 +586,7 @@ a.logo-me {
   background-repeat: no-repeat;
   background-position: center 150px;
   background-size: 150px;
+  background-attachment: fixed;
 }
 p.landing {
   height: 100%;
