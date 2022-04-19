@@ -31,6 +31,9 @@ body {
   }
   .up {
     background-color: var(--third-color);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
   }
   a.t-me {
     margin-right: 30px;
@@ -95,10 +98,10 @@ body {
     width: 53%;
   }
   div#Projects {
-    top: 192vh;
+    top: 252vh;
   }
   div#Contact {
-    top: 388vh;
+    top: 710vh;
   }
   h2 {
     font-size: 55px;
@@ -157,36 +160,45 @@ body {
     row-gap: 10px;
     position: absolute;
     top: 90px;
-    right: 115px;
+    right: 130px;
     background-color: var(--third-color);
   }
-  header nav.none {
+  header nav {
+    width: 50px;
+    height: 36px;
+    background-color: transparent;
+    z-index: 100;
+  }
+  header nav ul.links {
     display: none;
   }
-  header:hover nav.none {
-    display: block;
+  nav:hover ul.links {
+    display: flex;
   }
   ul.links::before {
     content: "";
     border-style: solid;
     border-width: 30px;
-    border-color: transparent var(--third-color) transparent transparent;
+    border-color: transparent transparent var(--first-color) transparent;
     position: absolute;
     right: 0px;
-    top: -30px;
+    top: -60px;
     display: block;
   }
   ul.links li {
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: #ddd;
     padding: 25px;
+  }
+  ul.links li:not(:last-child) {
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: #ddd;
   }
   div.icon-menu {
     background-color: transparent;
     position: absolute;
-    right: 115px;
+    right: 130px;
     display: block;
+    direction: rtl;
   }
   span.menu {
     width: 50px;
@@ -201,6 +213,18 @@ body {
 @media (min-width: 992px) {
   .container {
     width: 1000px;
+  }
+  ul.links li:not(:last-child) {
+    border-right-width: 0px;
+    border-right-style: solid;
+    border-right-color: #ddd;
+  }
+  header nav ul.links {
+    display: flex;
+  }
+  header nav {
+    width: 291.023px;
+    height: 50.909px;
   }
   span.under {
     font-size: 16px;
@@ -360,6 +384,27 @@ body {
   .container {
     width: 1170px;
   }
+  ul.links li:not(:last-child) {
+    border-right-width: 0px;
+    border-right-style: solid;
+    border-right-color: #ddd;
+  }
+  header nav ul.links {
+    display: flex;
+  }
+  header nav {
+    width: 291.023px;
+    height: 50.909px;
+  }
+  span.under {
+    font-size: 16px;
+    margin: 0px 0px;
+    margin-top: 0px;
+    line-height: 50px;
+  }
+  ul.links li:hover {
+    background-color: transparent;
+  }
   .up {
     background-color: var(--third-color);
     position: fixed;
@@ -384,10 +429,22 @@ body {
   }
   ul.links {
     display: grid;
+    row-gap: 0px;
+    position: relative;
+    top: 0px;
+    right: 0px;
     grid-template-columns: repeat(3, auto);
     column-gap: 10px;
-    top: -10px;
+    top: 0px;
+    background-color: transparent;
   }
+  ul.links li {
+    border-bottom-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #ddd;
+    padding: 10px;
+  }
+
   span.icon-menu {
     visibility: hidden;
   }
@@ -441,6 +498,7 @@ body {
     width: 300px;
     height: 280px;
   }
+
   .fa-address-card:before,
   .fa-contact-card:before,
   .fa-vcard:before {
@@ -508,8 +566,7 @@ a.links-nav {
   transition-duration: 0.2s;
 }
 a.links-nav:hover {
-  background-color: #fff;
-  color: var(--third-color);
+  color: var(--first-color);
 }
 a.logo-me {
   font-family: "Lobster", cursive;
