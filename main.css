@@ -98,10 +98,10 @@ body {
     width: 53%;
   }
   div#Projects {
-    top: 200vh;
+    top: 180vh;
   }
   div#Contact {
-    top: 535vh;
+    top: 450vh;
   }
   h2 {
     font-size: 55px;
@@ -208,11 +208,19 @@ body {
     margin-top: 7px;
     display: block;
   }
+  .landing {
+    background-position: center 600px;
+    background-size: 200px;
+  }
 }
 /* Medium */
 @media (min-width: 992px) {
   .container {
     width: 1000px;
+  }
+  .landing {
+    background-position: center 160px;
+    background-size: 150px;
   }
   ul.links li:not(:last-child) {
     border-right-width: 0px;
@@ -388,6 +396,10 @@ body {
     border-right-width: 0px;
     border-right-style: solid;
     border-right-color: #ddd;
+  }
+  .landing {
+    background-position: center 160px;
+    background-size: 150px;
   }
   header nav ul.links {
     display: flex;
@@ -584,9 +596,6 @@ a.logo-me {
   align-items: center;
   background-image: url(images/my-logo6.png);
   background-repeat: no-repeat;
-  background-position: center 190px;
-  background-size: 150px;
-  background-attachment: fixed;
 }
 p.landing {
   height: 100%;
