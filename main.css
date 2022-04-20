@@ -209,7 +209,7 @@ body {
     display: block;
   }
   .landing {
-    background-position: center 600px;
+    background-position: 50% 230px;
     background-size: 200px;
   }
 }
