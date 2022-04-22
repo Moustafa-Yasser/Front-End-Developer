@@ -38,7 +38,7 @@ body {
   a.t-me {
     margin-right: 30px;
 
-    margin-top: 30px;
+    margin-top: 50px;
   }
   header {
     height: 75px;
@@ -97,12 +97,6 @@ body {
   span.hiddn.cen {
     width: 53%;
   }
-  div#Projects {
-    top: 180vh;
-  }
-  div#Contact {
-    top: 450vh;
-  }
   h2 {
     font-size: 55px;
     line-height: 70px;
@@ -140,7 +134,7 @@ body {
   }
   div.Contact {
     height: 630px;
-    margin-top: 160px;
+    margin-top: 200px;
   }
   p.Name {
     font-size: 35px;
@@ -212,12 +206,23 @@ body {
     background-position: 50% 230px;
     background-size: 200px;
   }
+  h1.pr {
+    padding-top: 130px;
+  }
+  img.logo-me-ph {
+    width: 300px;
+    top: 300px;
+  }
 }
 /* Medium */
 @media (min-width: 992px) {
   .container {
     width: 1000px;
   }
+  a.t-me {
+    margin-top: 0px;
+  }
+
   .landing {
     background-position: center 160px;
     background-size: 150px;
@@ -356,15 +361,13 @@ body {
   .box-one {
     height: 400px;
   }
-  div#Projects {
-    top: 170vh;
-  }
   span {
     margin-top: 25px;
     font-size: 16px;
   }
   div.Projects {
     grid-template-columns: auto auto auto;
+    margin-top: 0px;
   }
   div.Services {
     height: 75vh;
@@ -375,9 +378,6 @@ body {
   }
   span.hiddn.cen {
     width: 35%;
-  }
-  div#Contact {
-    top: 3000px;
   }
   p.one {
     font-size: 16px;
@@ -386,11 +386,25 @@ body {
   a.logo-me {
     font-size: 30px;
   }
+  h1.pr {
+    padding-top: 60px;
+  }
+  img.logo-me-ph {
+    width: 150px;
+    top: 100px;
+  }
 }
 /* Large */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+  img.logo-me-ph {
+    width: 150px;
+    top: 100px;
+  }
+  a.t-me {
+    margin-top: 0px;
   }
   ul.links li:not(:last-child) {
     border-right-width: 0px;
@@ -530,15 +544,13 @@ body {
   .box-one {
     height: 400px;
   }
-  div#Projects {
-    top: 170vh;
-  }
   span {
     margin-top: 25px;
     font-size: 16px;
   }
   div.Projects {
     grid-template-columns: auto auto auto;
+    margin-top: 0px;
   }
   div.Services {
     height: 75vh;
@@ -549,9 +561,6 @@ body {
   }
   span.hiddn.cen {
     width: 35%;
-  }
-  div#Contact {
-    top: 3000px;
   }
   p.one {
     font-size: 16px;
@@ -562,7 +571,11 @@ body {
   }
 }
 /* header */
-
+img.logo-me-ph {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -594,8 +607,6 @@ a.logo-me {
   justify-content: center;
   height: 100vh;
   align-items: center;
-  background-image: url(images/my-logo6.png);
-  background-repeat: no-repeat;
 }
 p.landing {
   height: 100%;
@@ -623,16 +634,9 @@ div.Services {
   justify-content: center;
   align-items: center;
 }
-div#Services {
-  width: 10px;
-  height: 10px;
-  background-color: transparent;
-  position: absolute;
-  left: 50%;
-  top: 90%;
-}
 .up-four {
-  margin-top: 60px;
+  position: relative;
+  top: 100px;
 }
 .box-one {
   text-align: center;
@@ -668,6 +672,14 @@ h1 {
   font-weight: 900;
   text-shadow: 3px 6px 15px black;
 }
+h1.sr {
+  margin-top: 120px;
+}
+h1.pr {
+  padding-top: 60px;
+  padding-top: 130px;
+  padding-bottom: 20px;
+}
 span.under {
   text-align: center;
   font-weight: 200;
@@ -681,13 +693,6 @@ div.Projects {
 img.pro {
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-}
-div#Projects {
-  width: 100px;
-  height: 100px;
-  background-color: transparent;
-  position: absolute;
-  left: 50%;
 }
 .box-two {
   margin-top: 30px;
@@ -738,12 +743,6 @@ h1.Contacts {
   position: relative;
   box-shadow: 0 0 10px 0 black;
   padding: 20px;
-}
-div#Contact {
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  background-color: transparent;
 }
 
 i.fa-solid.fa-envelope-circle-check {
