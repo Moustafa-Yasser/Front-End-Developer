@@ -643,7 +643,7 @@ div.Services {
   padding: 10px;
   background-color: var(--second-color);
   border-radius: 20px;
-  box-shadow: 0 0 20px 0 #f96d001f;
+  box-shadow: 0 0 20px 0 #000000;
   transition-duration: 1s;
 }
 .box-one:hover {
@@ -700,6 +700,7 @@ img.pro {
   border-radius: 90px;
   transition-duration: 0.8s;
   transition-delay: 0.105s;
+  box-shadow: 0px 0px 20px 0px black;
 }
 .box-two:hover {
   transform: scale(1.2);
