@@ -626,6 +626,21 @@ h2 {
 
   color: #f96d00;
 }
+.text {
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 10px black;
+  animation-name: an;
+  animation-duration: 1s;
+}
+@keyframes an {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 /* End Landing */
 /* Start main */
 /* Start Services */
