@@ -60,7 +60,7 @@ body {
     row-gap: 80px;
   }
   .box-one {
-    height: 550px;
+    height: 650px;
     display: grid;
     align-items: center;
   }
@@ -359,7 +359,7 @@ body {
     grid-template-columns: repeat(3, auto);
   }
   .box-one {
-    height: 400px;
+    height: 460px;
   }
   span {
     margin-top: 25px;
@@ -542,7 +542,7 @@ body {
     grid-template-columns: repeat(3, auto);
   }
   .box-one {
-    height: 400px;
+    height: 460px;
   }
   span {
     margin-top: 25px;
@@ -575,6 +575,7 @@ img.logo-me-ph {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -1;
 }
 header {
   display: flex;
@@ -631,7 +632,7 @@ h2 {
   border-radius: 20px;
   box-shadow: 0 0 20px 10px black;
   animation-name: an;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
 @keyframes an {
   from {
@@ -655,7 +656,7 @@ div.Services {
 }
 .box-one {
   text-align: center;
-  padding: 10px;
+  padding: 30px;
   background-color: var(--second-color);
   border-radius: 20px;
   box-shadow: 0 0 20px 0 #000000;
