@@ -197,7 +197,7 @@ body {
   span.menu {
     width: 50px;
     height: 5px;
-    background-color: #393e46;
+    background-color: var(--second-color);
     margin: 0px;
     margin-top: 7px;
     display: block;
@@ -625,7 +625,7 @@ h2 {
 .fa-vcard:before {
   content: "\f2bb";
 
-  color: #f96d00;
+  color: var(--third-color);
 }
 .text {
   padding: 30px;
@@ -753,7 +753,7 @@ h1.Contacts {
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: #393e46;
+  background-color: var(--second-color);
   border-radius: 5px;
   margin-top: 40px;
   font-size: 25px;
