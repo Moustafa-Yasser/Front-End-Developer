@@ -184,12 +184,22 @@ header .container .links ul li:not(:first-child)::before {
 }
 
 .landing .iconLogo img {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
   width: 200px;
-  margin-top: 40px;
+  animation: rotateMe 8s linear infinite;
+}
+
+@keyframes rotateMe {
+  0% {
+    transform: rotate(0deg) translateX(0px);
+  }
+
+  50% {
+    transform: rotate(180deg) translateX(200px);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(0px);
+  }
 }
 
 .landing .textLanding {
@@ -203,7 +213,7 @@ header .container .links ul li:not(:first-child)::before {
   border-radius: 10px;
   margin-top: 30px;
   animation: scaleLanding 1s,
-  rotateBox 1s linear 1s infinite;
+    rotateBox 3s linear 1s infinite;
 }
 
 @keyframes scaleLanding {
@@ -219,23 +229,26 @@ header .container .links ul li:not(:first-child)::before {
     transform: translate(-50%, -50%) scale(1);
   }
 }
+
 @keyframes rotateBox {
   0% {
-    transform:  translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 
   25% {
-    transform:  translate(-50%, -50%) rotate(2deg);
+    transform: translate(-50%, -50%) rotate(2deg);
   }
 
   50% {
-    transform:  translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
+
   75% {
-    transform:  translate(-50%, -50%) rotate(-2deg);
+    transform: translate(-50%, -50%) rotate(-2deg);
   }
+
   100% {
-    transform:  translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 }
 
@@ -259,24 +272,30 @@ header .container .links ul li:not(:first-child)::before {
     width: 800px;
   }
 }
+
 .landing .container .textLanding i {
   font-size: 30px;
-    color: #393e46;
+  color: #393e46;
 }
+
 /* End landing */
 /* Start Services */
-.Services .container h1, .Projects .container h1, .Contact .container h1 {
+.Services .container h1,
+.Projects .container h1,
+.Contact .container h1 {
   margin-top: 100px;
   text-align: center;
   color: var(--secondColor);
   font-weight: 900;
   text-shadow: 3px 6px 15px black;
 }
+
 .Services .container .contentServices {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
+
 .Services .container .contentServices .cardService {
   text-align: center;
   padding: 30px;
@@ -285,19 +304,23 @@ header .container .links ul li:not(:first-child)::before {
   box-shadow: 0 0 20px 0 #000000;
   transition-duration: 1s;
 }
+
 .Services .container .contentServices .cardService:hover {
   background-color: var(--firstColor);
 }
+
 .Services .container .contentServices .cardService i {
   color: var(--thirdColor);
   font-size: 60px;
 }
+
 .Services .container span {
   font-size: 13px;
   text-align: center;
   display: block;
   margin-top: 20px;
 }
+
 /* End Services */
 /* Start Projects */
 .Projects .container .contentProjects {
@@ -305,6 +328,7 @@ header .container .links ul li:not(:first-child)::before {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 35px;
 }
+
 .Projects .container .contentProjects .boxProjects {
   margin-top: 30px;
   background-color: var(--secondColor);
@@ -313,11 +337,13 @@ header .container .links ul li:not(:first-child)::before {
   text-align: center;
   border-radius: 80px;
 }
+
 .Projects .container .contentProjects .boxProjects .imgProjects {
-    width: -webkit-fill-available;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+  width: -webkit-fill-available;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
+
 .Projects .container .contentProjects .boxProjects a.buttonProjects {
   text-decoration: none;
   color: var(--fourthColor);
@@ -331,11 +357,13 @@ header .container .links ul li:not(:first-child)::before {
   border: 2px solid transparent;
   padding: 6px;
 }
+
 .Projects .container .contentProjects .boxProjects a.buttonProjects:hover {
   color: var(--thirdColor);
   background-color: transparent;
   border: 2px solid var(--thirdColor);
 }
+
 /* End Projects */
 /* Start Contact */
 .contentContact {
@@ -357,6 +385,7 @@ header .container .links ul li:not(:first-child)::before {
   width: 80%;
   height: 200px;
 }
+
 .Contact .container .boxContact i {
   font-size: 90px;
   color: var(--thirdColor);
@@ -368,18 +397,23 @@ header .container .links ul li:not(:first-child)::before {
   top: 35px;
   transform: translateX(-50%);
 }
+
 .Contact .container .boxContact i:first-child {
   visibility: hidden;
 }
+
 .Contact .container .boxContact:hover i:nth-child(2) {
   visibility: hidden;
   transform: translateX(-50%) rotate3d(1, 1, 1, 240deg);
 }
+
 .Contact .container .boxContact:hover i:first-child {
   transform: translateX(-50%) rotate3d(1, 1, 1, 360deg);
   visibility: visible;
 }
-.Contact .container .boxContact span.textOne, .textTwo {
+
+.Contact .container .boxContact span.textOne,
+.textTwo {
   font-size: 4.5vw;
   position: absolute;
   bottom: 20px;
@@ -388,51 +422,64 @@ header .container .links ul li:not(:first-child)::before {
   transition-duration: 0.4s;
   transition-timing-function: linear;
 }
+
 a.t-me {
   color: var(--fourthColor);
 }
+
 .textTwo {
   visibility: hidden;
 }
-.Contact .container .boxContact:hover  span.textOne{
+
+.Contact .container .boxContact:hover span.textOne {
   transform: rotate3d(1, 1, 1, 360deg);
   visibility: hidden;
 }
-.Contact .container .boxContact:hover  .textTwo{
+
+.Contact .container .boxContact:hover .textTwo {
   transform: rotate3d(1, 1, 1, 360deg);
   visibility: visible;
 }
+
 /* End Contact */
-/* Start Footer */ 
+/* Start Footer */
 footer {
   background-color: var(--thirdColor);
   margin-top: 80px;
 }
+
 footer .container {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
+
 p.textFooter {
   font-weight: bold;
 }
+
 footer .container .iconFoot {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 footer .container .iconFoot a {
   list-style: none;
   height: 17.5px;
 }
-footer .container .iconFoot a i{
+
+footer .container .iconFoot a i {
   font-size: 20px;
   transition-duration: .2s;
   color: var(--fourthColor);
 }
+
 footer .container .iconFoot a:first-child i:hover {
   color: #0a66c2;
 }
+
 footer .container .iconFoot a:hover:nth-child(2) i {
   color: #e6edf3;
 }
-/* End Footer */ 
+
+/* End Footer */
