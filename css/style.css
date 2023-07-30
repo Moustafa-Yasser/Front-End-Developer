@@ -196,13 +196,14 @@ header .container .links ul li:not(:first-child)::before {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
   text-align: center;
   padding: 30px;
   box-shadow: 0px 0px 20px 0px black;
   border-radius: 10px;
   margin-top: 30px;
-  animation: scaleLanding 1s;
+  animation: scaleLanding 1s,
+  rotateBox 1s linear 1s infinite;
 }
 
 @keyframes scaleLanding {
@@ -216,6 +217,25 @@ header .container .links ul li:not(:first-child)::before {
 
   100% {
     transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes rotateBox {
+  0% {
+    transform:  translate(-50%, -50%) rotate(0deg);
+  }
+
+  25% {
+    transform:  translate(-50%, -50%) rotate(2deg);
+  }
+
+  50% {
+    transform:  translate(-50%, -50%) rotate(0deg);
+  }
+  75% {
+    transform:  translate(-50%, -50%) rotate(-2deg);
+  }
+  100% {
+    transform:  translate(-50%, -50%) rotate(0deg);
   }
 }
 
@@ -239,7 +259,10 @@ header .container .links ul li:not(:first-child)::before {
     width: 800px;
   }
 }
-
+.landing .container .textLanding i {
+  font-size: 30px;
+    color: #393e46;
+}
 /* End landing */
 /* Start Services */
 .Services .container h1, .Projects .container h1, .Contact .container h1 {
