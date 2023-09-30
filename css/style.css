@@ -32,13 +32,6 @@ body {
   margin-left: auto;
 }
 
-/* small */
-@media (max-width: 768px) {
-  .container {
-    width: 400px;
-  }
-}
-
 /* medium */
 @media (min-width: 992px) {
   .container {
@@ -157,7 +150,7 @@ header .container .links ul li:not(:first-child)::before {
     justify-content: center;
   }
 
-  header .container .links:hover ul {
+  header .container .links.menu ul {
     display: flex;
   }
 
@@ -212,8 +205,7 @@ header .container .links ul li:not(:first-child)::before {
   box-shadow: 0px 0px 20px 0px black;
   border-radius: 10px;
   margin-top: 30px;
-  animation: scaleLanding 1s,
-    rotateBox 3s linear 1s infinite;
+  animation: scaleLanding 1s, rotateBox 3s linear 1s infinite;
 }
 
 @keyframes scaleLanding {
@@ -291,8 +283,9 @@ header .container .links ul li:not(:first-child)::before {
 }
 
 .Services .container .contentServices {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -303,6 +296,7 @@ header .container .links ul li:not(:first-child)::before {
   border-radius: 20px;
   box-shadow: 0 0 20px 0 #000000;
   transition-duration: 1s;
+  width: 300px;
 }
 
 .Services .container .contentServices .cardService:hover {
@@ -318,14 +312,16 @@ header .container .links ul li:not(:first-child)::before {
   font-size: 13px;
   text-align: center;
   display: block;
-  margin-top: 20px;
+  width: 250px;
+  margin: 20px auto 0;
 }
 
 /* End Services */
 /* Start Projects */
 .Projects .container .contentProjects {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 35px;
 }
 
@@ -336,10 +332,17 @@ header .container .links ul li:not(:first-child)::before {
   box-shadow: 0px 0px 20px 0px black;
   text-align: center;
   border-radius: 80px;
+  width: 325px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Projects .container .contentProjects .boxProjects .imgProjects {
-  width: -webkit-fill-available;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 }
@@ -350,7 +353,7 @@ header .container .links ul li:not(:first-child)::before {
   font-weight: bold;
   background-color: var(--thirdColor);
   border-radius: 40px;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   display: block;
   width: 50%;
   margin: 20px auto 10px;
@@ -367,80 +370,67 @@ header .container .links ul li:not(:first-child)::before {
 /* End Projects */
 /* Start Contact */
 .contentContact {
-  gap: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.Contact .container .boxContact {
-  margin: auto;
   display: grid;
   justify-content: center;
-  align-items: center;
+}
+.contentContact p {
+  margin: 10px 0;
   background-color: var(--secondColor);
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0 0 10px 0 black;
-  padding: 20px;
-  width: 80%;
-  height: 200px;
+  padding: 15px 10px;
+  border-radius: 6px;
+  animation: scaleUpAndDown 3s
+    linear(
+      0 0%,
+      0.22 2.1%,
+      0.86 6.5%,
+      1.11 8.6%,
+      1.3 10.7%,
+      1.35 11.8%,
+      1.37 12.9%,
+      1.37 13.7%,
+      1.36 14.5%,
+      1.32 16.2%,
+      1.03 21.8%,
+      0.94 24%,
+      0.89 25.9%,
+      0.88 26.85%,
+      0.87 27.8%,
+      0.87 29.25%,
+      0.88 30.7%,
+      0.91 32.4%,
+      0.98 36.4%,
+      1.01 38.3%,
+      1.04 40.5%,
+      1.05 42.7%,
+      1.05 44.1%,
+      1.04 45.7%,
+      1 53.3%,
+      0.99 55.4%,
+      0.98 57.5%,
+      0.99 60.7%,
+      1 68.1%,
+      1.01 72.2%,
+      1 86.7%,
+      1 100%
+    )
+    infinite;
 }
-
-.Contact .container .boxContact i {
-  font-size: 90px;
-  color: var(--thirdColor);
-  margin: auto;
-  transition-duration: 0.4s;
-  transition-timing-function: linear;
-  position: absolute;
-  left: 50%;
-  top: 35px;
-  transform: translateX(-50%);
+@keyframes scaleUpAndDown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
-.Contact .container .boxContact i:first-child {
-  visibility: hidden;
+.contentContact p a {
+  color: #ffc79b;
+  font-weight: bold;
+  text-decoration: none;
 }
-
-.Contact .container .boxContact:hover i:nth-child(2) {
-  visibility: hidden;
-  transform: translateX(-50%) rotate3d(1, 1, 1, 240deg);
-}
-
-.Contact .container .boxContact:hover i:first-child {
-  transform: translateX(-50%) rotate3d(1, 1, 1, 360deg);
-  visibility: visible;
-}
-
-.Contact .container .boxContact span.textOne,
-.textTwo {
-  font-size: 4.5vw;
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  transition-duration: 0.4s;
-  transition-timing-function: linear;
-}
-
-a.t-me {
-  color: var(--fourthColor);
-}
-
-.textTwo {
-  visibility: hidden;
-}
-
-.Contact .container .boxContact:hover span.textOne {
-  transform: rotate3d(1, 1, 1, 360deg);
-  visibility: hidden;
-}
-
-.Contact .container .boxContact:hover .textTwo {
-  transform: rotate3d(1, 1, 1, 360deg);
-  visibility: visible;
-}
-
 /* End Contact */
 /* Start Footer */
 footer {
@@ -451,6 +441,7 @@ footer {
 footer .container {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
 p.textFooter {
@@ -470,7 +461,7 @@ footer .container .iconFoot a {
 
 footer .container .iconFoot a i {
   font-size: 20px;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   color: var(--fourthColor);
 }
 
